@@ -1,0 +1,27 @@
+body{
+    background:#F9FBFD;
+}
+.ql-toolbar{
+    width: 97%;
+    margin: auto;
+    background: #EDF2FA;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.ql-snow{
+    border: none !important;
+}
+.ql-container{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    background:#F9FBFD;
+}
+.ql-editor{
+    border: 1px solid lightgray !important;
+    width: 8.5in;
+    background:white;
+    min-height: 11in;
+}
