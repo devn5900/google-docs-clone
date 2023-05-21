@@ -74,25 +74,41 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex items-center gap-3 pointer">
-              <li>File</li>
-              <li>Edit</li>
-              <li>View</li>
-              <li>Insert</li>
-              <li>Format</li>
-              <li>Tools</li>
-              <li>Extension</li>
-              <li>Help</li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                File
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Edit
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                View
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Insert
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Format
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Tools
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Extension
+              </li>
+              <li className="hover:bg-gray-200 px-1 py-0.5s rounded-md cursor-pointer">
+                Help
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="flex items-center gap-7 ">
-        <div className="text-2xl">
+        <div className="text-2xl hover:bg-gray-200 p-2 rounded-full cursor-pointer">
           <BiMessageDetail />
         </div>
         <div>
-          <div className="flex items-center gap-1 ">
-            <div className="text-2xl">
+          <div className="flex items-center gap-1  hover:bg-gray-200 p-2 rounded-full cursor-pointer">
+            <div className="text-2xl ">
               <BiVideo />
             </div>
             <IoMdArrowDropdown />
@@ -101,7 +117,7 @@ const Navbar = () => {
         <ShareModal show={show} />
         <div>
           <img
-            className="rounded-full"
+            className="rounded-full  hover:bg-gray-200 p-0.5  cursor-pointer"
             src="https://lh3.googleusercontent.com/ogw/AOLn63GhEUlIaGo13tUkBiaVlKmnLVpX6ja_m6FCl-C9DQ=s32-c-mo"
           />
         </div>
