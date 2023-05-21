@@ -27,7 +27,7 @@ export const saveData = (data) => async (dispatch) => {
     );
     dispatch(getReq("doc saved"));
   } catch (error) {
-    dispatch(getReq("error please refresh"));
+    // dispatch(getReq("error please refresh"));
 
     console.log(error);
   }
@@ -63,6 +63,6 @@ export const updateName = (id, data) => async (dispatch) => {
     dispatch(getReq("saved"));
   } catch (error) {
     console.log(error);
-    dispatch(getReq("error please refresh"));
+    // dispatch(getReq("error please refresh"));
   }
 };
