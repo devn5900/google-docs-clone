@@ -18,6 +18,9 @@ const Navbar = () => {
   } = useSelector((store) => store.editorReducer);
   const [name, setName] = useState("");
   const [show, setShow] = useState(true);
+  /*
+   It is used to change the name of the document or to remove the event from the input tag when it will on view mode.
+  */
   const isEnable = (e) => {
     if (show) {
       e.target.removeAttribute("onChange");
@@ -35,6 +38,10 @@ const Navbar = () => {
       }
     }
   };
+  /*
+  when the navbar is in view mode it will update the show state, true
+  by default it is true
+  */
   useEffect(() => {
     setName(storeName);
     if (location.pathname.includes("view")) {

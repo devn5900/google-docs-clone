@@ -17,6 +17,10 @@ export const addName = (payload) => {
 export const getReq = (payload) => {
   return { type: GET_REQ, payload };
 };
+
+/*
+    It will make a post request to the server to save the content
+*/
 export const saveData = (data) => async (dispatch) => {
   dispatch(getReq("saving..."));
 
@@ -33,6 +37,9 @@ export const saveData = (data) => async (dispatch) => {
   }
 };
 
+/*
+  it will fetch all the content of the given id
+*/
 export const getTextAPI = (id) => async (dispatch) => {
   dispatch(getReq("loading..."));
   try {
@@ -50,6 +57,9 @@ export const getTextAPI = (id) => async (dispatch) => {
   }
 };
 
+/*
+  it will make a patch request to change the name of the document
+*/
 export const updateName = (id, data) => async (dispatch) => {
   dispatch(getReq("saving..."));
 

@@ -7,6 +7,9 @@ const ShareModal = ({ show }) => {
   const [toggle, setToggle] = useState(false);
   const { id, name } = useSelector((store) => store.editorReducer);
 
+  /*
+    this is used to show the modal
+  */
   const shareLink = (e) => {
     if (show) {
       e.target.removeAttribute("onClick");
@@ -14,11 +17,18 @@ const ShareModal = ({ show }) => {
     }
     setOpen(true);
   };
+  /*
+    this is used to close the modal
+  */
   const closeModel = (e) => {
     if (e.target.id == "modal") {
       setOpen(false);
     }
   };
+  /*
+    it will copy the link in clipboard
+  
+  */
   const copyClipboard = (e) => {
     const url = `https://frontend-omega-ochre.vercel.app/document/${id}/view`;
     navigator.clipboard.writeText(url);
