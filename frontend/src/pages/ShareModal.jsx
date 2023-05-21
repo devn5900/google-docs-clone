@@ -20,7 +20,7 @@ const ShareModal = ({ show }) => {
     }
   };
   const copyClipboard = (e) => {
-    const url = `${process.env.REACT_APP_API_URL}/document/${id}/view`;
+    const url = `https://frontend-omega-ochre.vercel.app/document/${id}/view`;
     navigator.clipboard.writeText(url);
     setToggle(true);
     setTimeout(() => {
