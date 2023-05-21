@@ -5,8 +5,10 @@ import Navbar from "./pages/Navbar";
 import { v4 } from "uuid";
 import View from "./pages/View";
 import Icons from "./components/Icons";
+import { useSelector } from "react-redux";
 function App() {
-  document.title = "Untitled Document";
+  const { name } = useSelector((store) => store.editorReducer);
+  document.title = name || "Untitled Document";
   return (
     <div className="">
       <div>

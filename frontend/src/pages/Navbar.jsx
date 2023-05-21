@@ -11,7 +11,11 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const { id, name: storeName } = useSelector((store) => store.editorReducer);
+  const {
+    id,
+    name: storeName,
+    msg,
+  } = useSelector((store) => store.editorReducer);
   const [name, setName] = useState("");
   const [show, setShow] = useState(true);
   const isEnable = (e) => {
@@ -46,9 +50,9 @@ const Navbar = () => {
           <IoDocumentTextSharp />
         </div>
         <div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <input
-              className="text-xl"
+              className="text-xl w-32"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -59,6 +63,7 @@ const Navbar = () => {
             <div>
               <AiOutlineStar />
             </div>
+            <div>{msg}</div>
           </div>
           <div>
             <ul className="flex items-center gap-3 pointer">

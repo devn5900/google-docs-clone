@@ -4,7 +4,13 @@ import Quill from "quill";
 import { useEffect, useRef, useState } from "react";
 import { toolbarOptions } from "../utills/editor.config";
 import { useDispatch, useSelector } from "react-redux";
-import { addId, addText, getTextAPI, saveData } from "../redux/editor/action";
+import {
+  addId,
+  addText,
+  getReq,
+  getTextAPI,
+  saveData,
+} from "../redux/editor/action";
 import { useParams } from "react-router-dom";
 import { useSave } from "../hooks/useSave";
 
