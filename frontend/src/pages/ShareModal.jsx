@@ -20,7 +20,7 @@ const ShareModal = ({ show }) => {
     }
   };
   const copyClipboard = (e) => {
-    const url = `http://localhost:3000/document/${id}/view`;
+    const url = `${process.env.REACT_APP_API_URL}/document/${id}/view`;
     navigator.clipboard.writeText(url);
     setToggle(true);
     setTimeout(() => {
