@@ -47,10 +47,20 @@ const updateName = async (req, res) => {
     return res.status(400).json({ msg: "Invaid data" });
   }
   try {
-    const status = await docuModel.findOneAndUpdate(
-      { documentId: id },
-      { name }
-    );
+    const stat = await docuModel.findOne({ documentId: id });
+    if (stat) {
+      const status = await docuModel.findOneAndUpdate(
+        { documentId: id },
+        { name }
+      );
+    } else {
+      const status = new docuModel({
+        name,
+        documentId: id,
+        content: [],
+      });
+      await status.save();
+    }
     res.status(201).json({ msg: "Name Updated" });
   } catch (error) {
     return res.status(500).json({ msg: "Server Error" });
