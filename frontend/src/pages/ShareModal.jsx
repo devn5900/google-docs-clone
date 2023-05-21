@@ -76,7 +76,7 @@ const ShareModal = ({ show }) => {
                   onClick={copyClipboard}
                   className="flex gap-2 items-center bg-blue-400 py-2 px-5 rounded-full text-white"
                 >
-                  <FiLink2 /> {toggle ? "Text copied !" : "Copy link"}
+                  <FiLink2 /> {toggle ? "Link copied !" : "Copy link"}
                 </button>
               </div>
             </div>
